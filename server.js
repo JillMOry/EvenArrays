@@ -26,7 +26,7 @@ function evenArrays(id) {
 
 
 app.get('/', (request, response) => {
-    response.send('Hello to Even Arrays! Enter number less than 100 to see an array intergers')
+    response.send('Hello to Even Arrays! Enter a '/' and number less than 100 at the end of the URL to see an array of even intergers in the quantity entered!')
 });
 
 app.get('/:id', (request, response) => {
