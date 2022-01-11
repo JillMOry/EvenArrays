@@ -11,7 +11,7 @@ chai.request(app)
         console.log(error)
     }else{
         chai.assert.equal(response.status, 200, "Response was not OK")
-        chai.assert.equal(response.text, 'Hello to Even Arrays! Enter number less than 100 to see an array intergers')
+        chai.assert.equal(response.text, 'Hello to Even Arrays! Enter a backslach and number less than 100 at the end of the URL to see an array of even intergers.')
         console.log('All tests for "Hello Even Arrays" have passed YAY!')
         return 
     }

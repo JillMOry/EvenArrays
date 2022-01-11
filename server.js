@@ -2,15 +2,12 @@ let express = require('express');
 
 
 let app = express();
-app.listen(8080);
-// app.listen(3000);
+// app.listen(8080);
+app.listen(3000);
 
 
 function evenArrays(id) {
-    // console.log("filter evenArrays(b) ", b);
-    // let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
     const nums = [];
-    // console.log("nums ", nums);
     for (let i = 1; i <= id * 2; i += 1) {
         if(id > 99){
             return "Please enter a number less than 100"
@@ -18,7 +15,6 @@ function evenArrays(id) {
       nums.push(i);
         }
     }
-  
     let evens = nums.filter(num => num % 2 === 0 && num <= id * 2);
     return evens;
   }
@@ -26,7 +22,7 @@ function evenArrays(id) {
 
 
 app.get('/', (request, response) => {
-    response.send('Hello to Even Arrays! Enter a '/' and number less than 100 at the end of the URL to see an array of even intergers in the quantity entered!')
+    response.send('Hello to Even Arrays! Enter a backslach and number less than 100 at the end of the URL to see an array of even intergers.')
 });
 
 app.get('/:id', (request, response) => {
