@@ -2,7 +2,7 @@ let express = require('express');
 
 
 let app = express();
-app.l/isten(8080);
+app.listen(8080);
 // app.listen(3000);
 
 
